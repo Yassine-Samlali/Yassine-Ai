@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y AI - Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle-wrapper">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <div class="toggle-track">
+                <div class="toggle-moon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="toggle-sun">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="toggle-thumb"></div>
+            </div>
+        </button>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo-container">
+                <img src="Logo.png" alt="Y AI Logo" class="logo-image">
+                <h1>Image Generator</h1>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="input-section">
+                <h2>Generate Your Image</h2>
+                <div class="request-counter">
+                    <span>Remaining Requests: </span>
+                    <span id="requests-left" class="count">1000</span>
+                </div>
+                <div class="prompt-container">
+                    <input type="text" id="prompt" placeholder="Enter your image description...">
+                    <button id="generate-btn">Generate</button>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="loading-animation" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Creating Your Masterpiece</p>
+                    <div class="progress"></div>
+                    <div class="generating-steps">
+                        <div class="step" data-step="1">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Analyzing prompt...</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <i class="fas fa-magic"></i>
+                            <span>Generating image...</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                            <span>Adding final touches...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="result" class="result-container" style="display: none;">
+                    <img id="generated-image" src="" alt="Generated Image">
+                    <button id="download-btn" style="display: none;">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Logo.png" alt="Y AI Logo" class="footer-logo-image">
+            </div>
+            <div class="footer-info">
+                <p>Powered by Yassine AI Studio</p>
+                <p class="copyright">&copy; 2024 Yassine AI Studio. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Yassine-Samlali" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yassine-sm-b28b37263/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Otaku6Yassine" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100088390353500&mibextid=ZbWKwL" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
